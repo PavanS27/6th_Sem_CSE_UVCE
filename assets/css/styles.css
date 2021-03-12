@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-light: #fff;
+  --clr-dark: #303030;
+  --clr-accent: #16e0bd;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: #f2f2f2;
+}
+.imp {
+  color: var(--clr-accent);
+  text-align: center;
+  font-weight: bold;
+}
+:focus {
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
+}
+/* buttons and links styling  */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  margin: 0;
+}
+.button,
+.link {
+  text-decoration: none;
+  padding: 6px 8px;
+  background: var(--clr-accent);
+  width: 50%;
+  border: none;
+  margin: 2px;
+  border-radius: 4px;
+}
+@media screen and (max-width: 800px) {
+  .button,
+  .link {
+    width: 100%;
+  }
+}
+.button:focus,
+.btn-success {
+  border: none;
+  outline: none;
+}
+.button:hover,
+.link:hover {
+  opacity: 0.7;
+}
+/* styling of images */
+img {
+  padding: 12px 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
+  box-shadow: var(--bs);
+}
+@media screen and (max-width: 1000px) {
+  img {
+    max-width: 100%;
+    box-shadow: var(--bs);
+  }
+}
+/* Books links */
+.container {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.btn-success {
+  background-color: var(--clr-accent);
+  color: black;
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 100%;
+  }
+}
+/* footer */
+.footer {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background: var(--clr-accent);
+}
+h3 {
+  margin: 12px;
+  text-align: center;
+}
+/* CGPA generator */
+.heading {
+  text-align: center;
+}
+.content {
+  margin-top: 20px;
+  padding: 6px;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.select {
+  width: 50px;
+}
+.grade {
+  background: var(--clr-accent);
+  padding: 6px;
+  border-radius: 4px;
+}
+.output {
+  background: white;
+  padding: 2px;
+  margin: 2px;
+  border-radius: 2px;
+}

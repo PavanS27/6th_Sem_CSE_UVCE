@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSE 6TH-SEM</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/631054744f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"><span class="imp">CSE 6TH-SEM</span></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#tt"
+              >Time Table <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#syll"
+              >Syllabus Generator<span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#books"
+              >Books Download<span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#gpa"
+              >SGPA Calculator<span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#about"
+              >Credit<span class="sr-only">(current)</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Time table image -->
+    <div class="time_table" id="tt">
+      <br />
+      <img src="assets/images/tt2.png" alt="" id="time" />
+    </div>
+    <!-- buttons and images -->
+    <div class="syllabus_generator" id="syll">
+      <div class="button-group">
+        <button class="button link" onclick="display(1)">
+          Compiler Design
+        </button>
+        <button class="button link" onclick="display(2)">
+          Unix System Programming
+        </button>
+        <button class="button link" onclick="display(3)">
+          Wireless Networks
+        </button>
+        <button class="button link" onclick="display(4)">
+          Distributed Computing
+        </button>
+        <button class="button link" onclick="display(5)">
+          Cryptography and Network Security
+        </button>
+
+        <button class="button link" onclick="display(6)">
+          Cyber laws and Security
+        </button>
+        <button class="button link" onclick="display(7)">USP Lab</button>
+        <button class="button link" onclick="display(8)">CN Lab</button>
+      </div>
+      <div class="img-container">
+        <img
+          class="img"
+          src="assets/images/gen.png"
+          alt=""
+          class="img"
+          id="img-1"
+        />
+        <img class="img" src="" style="display: none" alt="" id="img-2" />
+        <img class="img" src="" alt="" id="img-3" style="display: none" />
+        <img class="img" src="" alt="" id="img-4" style="display: none" />
+      </div>
+    </div>
+    <h3 id="books">Books Download</h3>
+    <div class="container" id="books">
+      <div class="dropdown" id="books">
+        <button
+          class="btn btn-success dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Select Books
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a
+            target="_blank"
+            class="dropdown-item"
+            href="assets/books/Artificial Intelligence A Modern Approach by Stuart Russell, Peter Norvig, 3rd.pdf"
+            >Compiler Design
+          </a>
+          <a
+            target="_blank"
+            class="dropdown-item"
+            href="assets/books/Computer Networks 5th Edition.pdf"
+            >Unix System Programming</a
+          >
+
+          <a
+            target="_blank"
+            class="dropdown-item"
+            href="assets/books/Computer Graphics with OpenGL (4th ed.) [Hearn, Baker & Carithers 2013].pdf"
+            >Wireless Networks</a
+          >
+          <a
+            target="_blank"
+            class="dropdown-item"
+            href="assets/books/Database_Systems.pdf"
+          >
+            Distributed Computing</a
+          >
+          <a target="_blank" class="dropdown-item" href="assets/books/3.20.pdf"
+            >Cryptography and Network Security</a
+          >
+
+          <a
+            target="_blank"
+            class="dropdown-item"
+            href="assets/books/Probability_and_Statistics_with_Reliabil.pdf"
+            >Cyber laws and Security</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- <div class="container">
+      <div class="dropdown">
+        <button
+          class="btn btn-success dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Additional Resources
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a
+            target="_blank"
+            class="dropdown-item"
+            href="assets/books/271_AI Lect Notes.pdf"
+            >Artificial Intelligence - 1
+          </a>
+          <a
+            target="_blank"
+            class="dropdown-item"
+            href="assets/books/Artificial Intelligence by Kevin Knight, Elaine Rich, B. Nair (z-lib.org).pdf"
+            >Artificial Intelligence - 2
+          </a>
+          <a
+            target="_blank"
+            class="dropdown-item"
+            href="assets/books/OR NOTES.pdf"
+            >Operations Research</a
+          >
+
+          <a
+            target="_blank"
+            class="dropdown-item"
+            href="assets/books/PROBABILITY THEORY AND STOCHASTIC PROCESSES.pdf"
+            >Probability</a
+          >
+          <a
+            target="_blank"
+            class="dropdown-item"
+            href="assets/books/database_management_systems.pdf"
+            >DBMS</a
+          >
+          <a
+            target="_blank"
+            class="dropdown-item"
+            href="assets/books/Computer Networks.pdf"
+            >Computer Networks</a
+          >
+          <a
+            target="_blank"
+            class="dropdown-item"
+            href="assets/books/Docs_CSECGLNotes2013.pdf"
+            >Computer Graphics</a
+          >
+        </div>
+      </div>
+    </div> -->
+    <div class="container">
+      <div class="dropdown">
+        <button
+          class="btn btn-success dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          QUESTION PAPERS
+        </button>
+        <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a
+            target="_blank"
+            class="dropdown-item"
+            href="assets/books/EJ-818.pdf"
+          >
+            DBMS(2013[DEC/JAN])
+          </a>
+          <a
+            target="_blank"
+            class="dropdown-item"
+            href="assets/books/JE-825.pdf"
+          >
+            DBMS(2013[JUNE/JULY])
+          </a>
+          <a
+            target="_blank"
+            class="dropdown-item"
+            href="assets/books/JU 1020.pdf"
+          >
+            DBMS(2014[JAN/FEB])</a
+          >
+
+          <a
+            target="_blank"
+            class="dropdown-item"
+            href="assets/books/JU 897.pdf"
+          >
+            DBMS(2014[JAN/FEB(Y2K6)]])</a
+          >
+          <a
+            target="_blank"
+            class="dropdown-item"
+            href="assets/books/ED 768.pdf"
+          >
+            DBMS(2015[DECEMBER])</a
+          >
+          <a
+            target="_blank"
+            class="dropdown-item"
+            href="assets/books/EJ - 1223.pdf"
+          >
+            DBMS(2015[JUNE/JULY])</a
+          >
+        </div> -->
+      </div>
+    </div>
+    <h1 class="heading" id="gpa">SGPA Calculator</h1>
+    <div class="content">
+      <p class="grade">
+        GRADE :
+        <span class="output">0</span>
+      </p>
+      <p>
+        Compiler Design
+        <select id="select1" class="select">
+          <option value="10">s</option>
+          <option value="9">a</option>
+          <option value="8">b</option>
+          <option value="7">c</option>
+          <option value="6">d</option>
+          <option value="5">e</option>
+          <option value="4">f</option>
+        </select>
+      </p>
+
+      <p>
+        Unix System Programming
+        <select id="select2" class="select">
+          <option value="10">s</option>
+          <option value="9">a</option>
+          <option value="8">b</option>
+          <option value="7">c</option>
+          <option value="6">d</option>
+          <option value="5">e</option>
+          <option value="4">f</option>
+        </select>
+      </p>
+
+      <p>
+        Wireless Networks
+        <select id="select3" class="select">
+          <option value="10">s</option>
+          <option value="9">a</option>
+          <option value="8">b</option>
+          <option value="7">c</option>
+          <option value="6">d</option>
+          <option value="5">e</option>
+          <option value="4">f</option>
+        </select>
+      </p>
+
+      <p>
+        Distributed Computing
+        <select id="select4" class="select">
+          <option value="10">s</option>
+          <option value="9">a</option>
+          <option value="8">b</option>
+          <option value="7">c</option>
+          <option value="6">d</option>
+          <option value="5">e</option>
+          <option value="4">f</option>
+        </select>
+      </p>
+
+      <p>
+        Cryptography and Network Security
+        <select id="select5" class="select">
+          <option value="10">s</option>
+          <option value="9">a</option>
+          <option value="8">b</option>
+          <option value="7">c</option>
+          <option value="6">d</option>
+          <option value="5">e</option>
+          <option value="4">f</option>
+        </select>
+      </p>
+
+      <p>
+        Cyber laws and Security
+        <select id="select6" class="select">
+          <option value="10">s</option>
+          <option value="9">a</option>
+          <option value="8">b</option>
+          <option value="7">c</option>
+          <option value="6">d</option>
+          <option value="5">e</option>
+          <option value="4">f</option>
+        </select>
+      </p>
+
+      <p>
+        USP-LAB
+        <select id="select7" class="select">
+          <option value="10">s</option>
+          <option value="9">a</option>
+          <option value="8">b</option>
+          <option value="7">c</option>
+          <option value="6">d</option>
+          <option value="5">e</option>
+          <option value="4">f</option>
+        </select>
+      </p>
+
+      <p>
+        CN-LAB
+        <select id="select8" class="select">
+          <option value="10">s</option>
+          <option value="9">a</option>
+          <option value="8">b</option>
+          <option value="7">c</option>
+          <option value="6">d</option>
+          <option value="5">e</option>
+          <option value="4">f</option>
+        </select>
+      </p>
+
+      <button class="button" onclick="getOption()">Check</button>
+    </div>
+
+    <!-- footer -->
+    <div class="footer" id="about">
+      <a href="https://github.com/stali1234/infoapp.github.io" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </body>
+  <script>
+    function display(num) {
+      let pic1 = "";
+      let pic2 = "";
+      let pic3 = "";
+      let pic4 = "";
+      let p1 = document.getElementById("img-1");
+      let p2 = document.getElementById("img-2");
+      let p3 = document.getElementById("img-3");
+      let p4 = document.getElementById("img-4");
+
+      switch (num) {
+        case 1:
+          console.log("selected");
+          pic1 = "assets/images/cn1.png";
+          pic2 = "assets/images/cn2.png";
+          pic3 = "assets/images/cn3.png";
+          pic4 = "";
+          break;
+        case 2:
+          pic1 = "assets/images/ai1.png";
+          pic2 = "assets/images/ai2.png";
+          pic3 = "assets/images/ai3.png";
+          pic4 = "";
+          break;
+        case 3:
+          pic1 = "assets/images/dbms1.png";
+          pic2 = "assets/images/dbms2.png";
+          pic3 = "assets/images/dbms3.png";
+          pic4 = "";
+          break;
+        case 4:
+          pic1 = "assets/images/cg1.png";
+          pic2 = "assets/images/cg2.png";
+          pic3 = "assets/images/cg3.png";
+          pic4 = "";
+          break;
+        case 5:
+          pic1 = "assets/images/or1.png";
+          pic2 = "assets/images/or2.png";
+          pic3 = "assets/images/or3.png";
+          pic4 = "";
+          break;
+        case 6:
+          pic1 = "assets/images/pp1.png";
+          pic2 = "assets/images/pp2.png";
+          pic3 = "assets/images/pp3.png";
+          pic4 = "";
+          break;
+        case 7:
+          pic1 = "assets/images/dbmslab1.png";
+          pic2 = "assets/images/dbmslab2.png";
+          break;
+        case 8:
+          pic1 = "assets/images/psp1.png";
+          pic2 = "assets/images/psp2.png";
+          pic3 = "";
+          pic4 = "";
+          break;
+        case 9:
+          pic1 = "assets/images/psp1.png";
+          pic2 = "assets/images/psp2.png";
+          pic3 = "";
+          pic4 = "";
+          break;
+      }
+      p1.src = pic1;
+      if (pic2 !== "") {
+        p2.style.display = "block";
+        p2.src = pic2;
+      } else {
+        p2.style.display = "none;";
+      }
+      if (pic3 !== "") {
+        p3.style.display = "block";
+        p3.src = pic3;
+      } else {
+        p3.style.display = "none";
+      }
+      if (pic4 !== "") {
+        p4.style.display = "block";
+        p4.src = pic4;
+      } else {
+        p4.style.display = "none";
+      }
+    }
+
+    function getOption() {
+      selectElement1 = document.querySelector("#select1");
+      selectElement2 = document.querySelector("#select2");
+      selectElement3 = document.querySelector("#select3");
+      selectElement4 = document.querySelector("#select4");
+      selectElement5 = document.querySelector("#select5");
+      selectElement6 = document.querySelector("#select6");
+      selectElement7 = document.querySelector("#select7");
+      selectElement8 = document.querySelector("#select8");
+
+      output1 = selectElement1.value;
+      output2 = selectElement2.value;
+      output3 = selectElement3.value;
+      output4 = selectElement4.value;
+      output5 = selectElement5.value;
+      output6 = selectElement6.value;
+      output7 = selectElement7.value;
+      output8 = selectElement8.value;
+      out =
+        (parseInt(output1) +
+          parseInt(output2) +
+          parseInt(output3) +
+          parseInt(output4) +
+          parseInt(output5) +
+          parseInt(output6) +
+          parseInt(output7) +
+          parseInt(output8)) /
+        8;
+
+      document.querySelector(".output").textContent = out;
+    }
+  </script>
+</html>
